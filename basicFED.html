@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>前端html+css入門</title>
+
+		<meta name="description" content="前端html+css入門-詹淑貽">
+		<meta name="author" content="詹淑貽">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>HTML+CSS從頭開始</h1>
+					<h3>以 GeneralAssembly 的教材 step by step</h3>
+					<p>
+						<small>Created by <a href="##">ShuyiChan</a> / <a href="##">ProActive前端分享社群</a></small>
+					</p>
+				</section>
+				<section>
+					<h2>PROJECT 1: <br>BUILD A PERSONAL WEBSITE</h2>
+					<img src="images/personal1.png" height="1000" width="1346" alt="personalwebsite">
+
+					完成個人頁面：<a href="https://dash.generalassemb.ly/shuyichan/build-your-own-personal-website" target="_blank">shuyichan's personal website</a>
+				</section>
+				<section>
+					<section>
+						<h1>HTML 基礎</h1>
+						<p>1. Make the headline and inputs</p>
+					</section>
+					<section>
+						<h2>
+							標籤 (tags) 
+						</h2>
+						<img src="images/tags.jpg" height="300" width="388" alt="tags">
+						<p>//標籤：告訴網頁內容的用途與意義</p>
+					</section>
+					<section>
+						<h2>
+							標籤 的 屬性
+						</h2>
+						<img src="images/tags-type.jpg" height="300" width="388" alt="tags">
+						<p>//屬性：標籤中可以調整的選項</p>
+					</section>
+					<section>
+						<h2>已學到 標籤</h2>
+						<pre><code>
+	<h1>Anna Dowlin</h1>
+	<p>Hi!I'm Anna Dowlin,a NYC-based marketer.Say hello!</p>
+	<input type="email" placeholder="your email">
+	<input type="submit">  
+						</code></pre>
+						<ul>
+							<li>標題 h1</li>
+							<li>一段文字 p</li>
+							<li>輸入框 input type="email"</li>
+							<li>送出按鈕 input type="submit"</li>
+						</ul>
+
+						
+					</section>
+					<section>
+						<h2>標籤小重點</h2>
+						<ul>
+							<li>用對標籤 --針對內容選用語意相符的標籤</li>
+							<li>有始有終 --開始標籤與結尾標籤</li>
+						</ul>
+						<p class="fragment">//撰寫HTML，就是為了正確告訴瀏覽器我想要的效果</p>
+					</section>
+
+<!-- 					
+
+
+					<pre style="text-align:center;"><code data-trim contenteditable>
+						<h1>Anna Dowlin</h1>
+					</code></pre> -->
+				</section>
+
+
+				<section>
+					<section>
+						<h1>CSS 基礎</h1>
+						<p>2. Style the background and text</p>
+					</section>
+					<section>
+						<h2>HTML? CSS?</h2>
+						<ul>
+							<li>HTML是網頁的骨架</li>
+							<li>CSS 是網頁的衣服</li>
+						</ul>
+						<p>// CSS為赤裸裸的HTML網頁骨架穿上衣服</p>	
+					</section>
+					<section>
+						<h2>CSS三種穿衣法</h2>
+						<ul>
+							<li>直接穿： 行內樣式
+								<pre><code>
+<h1 style="color:red;">Anna Dowlin</h1>
+								</code></pre>
+							</li>
+							<li>整頁穿： 頁面嵌入
+								<pre><code>
+<style>
+	h1 {
+		color:red;
+	}
+</style>
+								</code></pre>
+							</li>
+							<li>借來穿： css檔案引入
+								<pre><code>
+<link rel="stylesheet" href="style.css">
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS 如何寫</h2>
+						<img src="images/css.jpg" height="300" width="648" alt="css解說">
+					</section>
+
+					<section>
+						<h2>CSS 排整齊</h2>
+						<img src="images/cssplace.jpg" height="300" width="516" alt="css解說">
+					</section>
+					<section>
+						<h2>CSS 選擇器</h2>
+						<ul>
+							<li>標籤</li>
+							<li>屬性選擇器</li>
+						</ul>
+						<pre><code>
+	<style>
+		h1{...}
+		input[type="email"]{...}
+	</style>
+						</code></pre>							
+
+					</section>					
+					<section>
+						<h2>Class & ID 選擇器</h2>
+
+						<ul>
+							<li>.Class可共用 </li>
+							<li>#ID 是唯一</li>
+							<li>假如我有<br>
+一個Class叫.highlight{...}<br>
+一個ID叫#nolight{...}</li>
+						</ul>
+						
+
+						<pre><code>
+	<h1 class="highlight">...</h1>
+	<p class="highlight">...</p>
+	<p id="nolight">...</p>
+						</code></pre>						
+					</section>	
+					<section>
+						<h1>HTML 基礎架構</h1>
+					</section>
+					<section>
+						<h2>HTML 基礎架構</h2>
+						<img src="images/html02.png" height="343" width="558" alt="html02">		
+						<ul>
+							<li>DOCTYPE 版本宣告</li>
+							<li>html 包住所有程式碼</li>
+							<li>head 頁面相關資訊 ＆ CSS碼</li>
+							<li>body 所有給使用者看到的網頁內容</li>
+						</ul>		
+					</section>									
+				</section>
+
+				<section>
+					<section>
+						<h1>圖片與表單 樣式</h1>
+						<p>3. Add a background image and logo</p>
+					</section>
+					<section>
+						<h2>img 標籤</h2>
+
+						<pre><code>
+	<img src="../personal1.png" alt="寫圖片描述">
+						</code></pre>						
+						<ul>
+							<li>src 圖片路徑</li>
+							<li>alt 用來描述圖片</li>
+						</ul>
+						<p>// 注意：img 沒有結尾標籤</p>
+
+					</section>
+					<section>
+						<h2>檔案路徑</h2>
+						<ul>
+							<li>絕對路徑: 完整網址連結，http://...</li>
+							<li>相對路徑: 相對於目前撰寫的檔案所在位置
+								<ul>
+									<li>同一層（相同目錄下）就直接寫檔案名稱
+									<pre><code>
+	<img src="personal1.png" alt="寫圖片描述">
+									</code></pre>
+									</li>
+									<li>在下一層資料夾，就要寫資料夾名稱斜線再寫檔名
+									<pre><code>
+	<img src="images/personal1.png" alt="寫圖片描述">
+									</code></pre>
+									</li>
+									<li>如果是在上一層的目錄中則要加上../
+									<pre><code>
+	<img src="../personal1.png" alt="寫圖片描述">
+									</code></pre>
+									</li>
+								</ul>								
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>背景 樣式</h2>
+						<pre><code>
+      background: url("http://dash.ga.co/assets/anna-bg.png");
+      background-size: cover;
+      background-position: center;
+						</code></pre>
+
+						<ul>
+							<li>background 引入背景圖路徑</li>
+							<li>background-size 調整背景尺寸 <a href="http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=cover" target="_blank">效果展示</a>	 </li>
+							<li>background-position 調整背景位置 </li>
+	
+						</ul>
+						<p class="fragment">// 去玩更多相關： background-attachment, background-clip, background-repeat </p>	
+					</section>
+					<section>
+						<h2>Box Model盒子模型</h2>
+						<img src="images/boxmodel.jpg" alt="Box Model盒子模型">	
+
+						<ul>
+							<li>物件大小 ＝ content+padding+border</li>
+							<li>與隔壁的距離 ＝ margin</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Box Model 算一算</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>內容width</th>
+									<th>padding</th>
+									<th>border</th>
+									<th>物件寬</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="fragment">70px</td>
+									<td>10px</td>
+									<td>5px</td>
+									<td> =  100px</td>
+								<tr>
+								<tr class="fragment">
+									<td colspan="4">70+10*2+5*2 = 100</td>
+								<tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>不想算嗎？</h2>
+
+						<p>設定 box-sizing: border-box; <br>讓這個元素的內距和邊框將不會增加元素本身的寬度</p>
+						<table class="fragment">
+							<thead>
+								<tr>
+									<th>內容width</th>
+									<th>padding</th>
+									<th>border</th>
+									<th>物件寬</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>100px</td>
+									<td>10px</td>
+									<td>5px</td>
+									<td> =  100px</td>
+								<tr>
+							</tbody>
+						</table>
+					</section>					
+				</section>
+
+				<section>
+					<h2>PROJECT 2: <br>BUILD A RESPONSIVE BLOG THEME</h2>
+					<img src="images/jeff.png" height="1282" width="1350" alt="jeffblog">
+
+					完成個人頁面：<a href="https://dash.generalassemb.ly/shuyichan/build-your-own-blog-theme" target="_blank">shuyichan's blog</a>
+				</section>
+				<section>
+					<section>
+						<h1>網頁header與nav</h1>
+						<p>1. Make the header and navigation HTML</p>
+					</section>
+					<section>
+						<h2>
+							HTML 語意化標籤 
+						</h2>
+						<p>//標籤：告訴網頁內容的用途與意義</p>
+						<ul>
+							<li> header : 一段文件、文章的標題</li>
+							<li> nav : 導航的意思 </li>
+							<li> aside : 主要內容之外的其他內容(側邊欄)</li>
+							<li> article : 為頁面中的一個區塊可多個，是獨立的內容 </li>
+							<li> section : 用於章節等段落的區分，必須有標題 </li>
+							<li> footer : HTML5頁面的下方，用以顯示相關資訊</li>
+						</ul>
+					</section>
+					<section>
+						<h2>
+							HTML 清單 
+						</h2>
+						<ul>
+							<li> 無序清單 : ul,li </li>
+							<li> 有序清單 : ol,li </li>
+							<li> 定義清單 : dl,dt,dd</li>
+							<li> 巢狀清單 : 清單中的清單</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>為header穿衣服</h1>
+						<p>2. Style the header with CSS</p>
+					</section>
+
+					<section>
+						<h2>CSS Reset </h2>
+						<ul>
+							<li>透過一組CSS設定，樣式統統歸零，排除不同瀏覽器間的預設值差異</li>
+							<li>常用的 ol, ul, li 等標籤，就必須特別再定義過才能正常運作</li>
+						</ul>
+						<h2>CSS Normalize</h2>
+						<ul>
+							<li>保留原本預設 HTML 標籤的樣式</li>
+							<li>針對不同瀏覽器與各版本間不相容的標籤進行些微調整，呈現一致</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>display</h2>
+						<p>每個 HTML 元素都有一個預設的 display 值</p>
+						<ul>
+							<li>block「區塊元素」佔位哥， 舉例：p 、 form</li>
+							<li>inline「行內元素」謙虛哥，舉例：span、a</li>
+							<li>none 隱藏不佔位</li>
+						</ul>
+						<p>還有延伸： <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank">display所有值</a>、
+						<a href="http://zh-tw.learnlayout.com/display.html" target="_blank">display版面示意</a></p>	
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>響應式設計＆like按鈕</h1>
+						<p>3. Add responsive design + "like" button</p>
+					</section>
+
+					<section>
+						<h2>水平居中</h2>
+						<ul>
+							<li>									
+								<pre><code>
+#main {
+  width: 500px;
+  margin: 0 auto; 
+}
+								</code></pre></li>
+							<li>width設定，可以避免該元素從左到右撐滿容器</li>
+							<li>設定左右外邊距（margin-left 與 margin-right）為 auto 來使其水平居中</li>
+							<li>// 視窗小於500px的話要讓區塊也跟著縮小，<br>要將width改成max-width</li>
+						</ul>
+						<!-- <p>//元素在顯示的時候，只會顯示到你所指定的寬度，然後剩餘的寬度平均的散落在左右兩邊的邊距上。</p> -->
+						<p>還有延伸： <a href="http://zh-tw.learnlayout.com/margin-auto.html" target="_blank">水平居中版面示意</a></p>	
+					</section>
+					<section>
+						<h2>Media Queries</h2>
+						<p>@media 媒體類型 and (條件)</p>
+						<ul>
+							<li>視窗寬度500px以上：採用 CSS1設定							
+								<pre><code>
+@media screen and (min-width:500px) {CSS1設定}
+								</code></pre></li>
+							<li>視窗寬度在481~768px之間，採用 CSS2設定
+								<pre><code>
+@media screen and (min-width: 481px) and (max-width: 768px)
+								</code></pre>
+							</li>
+						</ul>
+						<!-- <p>//元素在顯示的時候，只會顯示到你所指定的寬度，然後剩餘的寬度平均的散落在左右兩邊的邊距上。</p> -->
+						<p>還有延伸： <a href="https://hsinyu00.wordpress.com/2011/04/05/mobile-web-media-queries/" target="_blank">Media Queries 與 CSS</a></p>	
+					</section>
+				</section>								
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
